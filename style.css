@@ -1,0 +1,582 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    color: rgb(44, 44, 44);
+}
+
+#page-wrapper {
+    width: 100%;
+    max-width: 80em;
+    margin: 0 auto;
+    background-image: url(bilder/hintegrund.jpg);
+    font-family: Poppins, Helvetica, sans-serif;
+    top: 0;
+}
+
+.container img[src="bilder/logo.png"],
+.container img[src="../bilder/logo.png"] {
+    height: 4em;
+}
+
+.desktop {
+    display: none;
+}
+
+.container {
+    height: 5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(145, 145, 145, 0.5);
+}
+
+.mobile ul {
+    position: absolute;
+    right: 0px;
+    background: rgb(219, 219, 219);
+    margin-top: 15px;
+    width: 25em;
+    height: 30em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.5s ease;
+}
+
+.mobile a {
+    color: rgb(44, 44, 44);
+    text-decoration: none;
+    font-size: 1.2em;    
+    display:block;
+    padding: 2.3em 7em;
+}
+
+.mobile li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px dotted rgb(145, 145, 145);
+}
+
+.mobile li:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+.mobile button,
+img[alt="logo"] {
+    background-color: transparent;
+    border: none;
+    margin: auto 10px;
+    cursor: pointer;
+}
+
+.mobile button:focus + ul {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+}
+
+.h, .u, .m, .k {
+    font-weight: bolder;
+}
+
+main {
+    padding: 0 2em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin-top: 1em;
+}
+
+#video h3 {
+    font-weight: normal;
+    margin: auto 2em;
+    text-align: center;
+}
+
+video {
+    width: 70%;
+    margin: 2em auto;
+    border: 3px double rgb(44, 44, 44);
+    max-width: 400px;
+}
+
+#video, 
+#ueber-mich,
+#kunst,
+#kontakt {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#ueber-mich,
+#kunst,
+#kontakt {
+    background-image: url(bilder/sundown.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 35vh;
+}
+
+#ueber-mich h1,
+#kunst h1,
+#kontakt h1 {
+    text-align: center;
+    color: rgb(219, 219, 219);
+}
+
+#kunst h1 {
+    margin-top: 4em;
+}
+
+#ueber-mich p {
+    color: rgb(219, 219, 219);
+    text-align: center;
+    margin-top: 1em;
+}
+
+#ueber-mich h1 {
+    margin-top: 4em;
+}
+
+main>section {
+    width: 100%;
+}
+
+main>p {
+    text-align: center;
+    padding: 10px 0 20px 0;
+    border-bottom: 1px dotted rgb(44, 44, 44);
+}
+
+.karten {
+    margin-top: 2em;
+}
+
+.karten div {
+    padding: 0.5em 1.5em;
+    margin-top: 2em;
+    border-radius: 1em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(145, 145, 145, 0.5);
+    border: 1px dotted rgb(145, 145, 145);
+}
+
+.karten h2 {
+    color: rgb(44, 44, 44);
+    text-align: center;
+    padding-bottom: 0.2em;
+    border-bottom: 1px dotted rgb(44, 44, 44);
+}
+
+.karten p {
+    text-align: center;
+}
+
+.karten p>a {
+    text-decoration: none;
+    color: darkslateblue;
+    font-weight: bold;
+}
+
+.karten p>a:hover {
+    font-size: 1.1em;
+}
+
+.karten img {
+    width: 100%;
+    border: 3px double rgb(145, 145, 145);
+    border-radius: 1em;
+    margin: 1em 0;
+}
+
+.tattoo>a,
+.kunst>a,
+.foto>a {
+    text-decoration: none;
+    color: rgb(44, 44, 44);
+    font-weight: bolder;
+    background-color: rgb(219, 219, 219);
+    padding: 1em;
+    width: 70%;
+    text-align: center;
+    border-radius: 0.5em;
+    border: 1px solid rgb(44, 44, 44);
+    transition: transform 0.2s ease-in;
+}
+
+.tattoo>a:hover,
+.kunst>a:hover,
+.foto>a:hover {
+    color: seashell;
+    background-color: rgb(44, 44, 44);
+    transform: translateY(-5px);    
+}
+
+.ich {
+    margin: 0;
+}
+
+#ich h3,
+#bildung h3,
+#erfahrung h3 {
+    text-align: center;
+    padding: 0.5em 0 0 0;
+    margin-bottom: 1em;
+    border-bottom: 1px dotted rgb(145, 145, 145);
+}
+
+#ich p {
+    padding: 0.5em 0.5em;
+    margin-bottom: 1em;
+    border: 1px dotted rgb(145, 145, 145);
+    border-radius: 1em;
+    text-align: justify;
+    background-color: rgba(145, 145, 145, 0.5);
+}
+
+table, td {
+    border: 1px solid rgb(145, 145, 145);
+    border-collapse: collapse;
+}
+
+main section table {
+    margin: 1em 0;
+    width: 100%;
+    background-color: rgba(219, 219, 219, 0.6);
+}
+
+td {
+    padding: 10px 0px;
+    text-align: center;
+}
+
+.galerie {
+    width: 100vw;
+    height: 100%;
+}
+
+.galerie h3 {
+    text-align: center;
+    text-decoration: 1px dotted underline;
+    margin-top: 1em;
+}
+
+.galerie div {
+    width: 100%;
+    height: 100%;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    display: flex;
+    align-items: center;
+    margin: 1em 0px;
+}
+
+.galerie div section {
+    flex: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100%;
+    scroll-snap-align: start;
+}
+
+.galerie div img {
+    max-width: 300px;
+}
+
+.kontakt>div>section {
+    margin-top: 0.5em;
+    width: 360px;
+    float: left;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: repeat(1, 1fr);
+    align-items: center;
+    gap: 10px;
+}
+
+.kontakt>div>section img {
+    width: 40px;
+        
+}
+
+.kontakt>div {
+    margin-left: 1.5em;
+    
+}
+
+.kontakt h2 {
+    margin: 0.5em 0;
+    text-align: center;
+    border-bottom: 1px dotted rgb(145, 145, 145);
+}
+
+.kontakt {
+    background-color: rgba(145, 145, 145, 0.5);
+    margin-top: 0.5em;
+    padding-bottom: 0.5em;
+    border: 1px dotted rgba(145, 145, 145, 0.5);
+    border-radius: 1em;
+}
+
+section form {
+    margin-left: 1.5em;
+}
+form p{
+    width: 80%;
+    float: left;
+}
+
+form p input,
+form p textarea {
+    width: 100%;
+    margin-top: 0.5em;
+    padding: 1em 0.5em;
+    border: 1px dotted black;
+    border-radius: 0.5em;
+    font-family: Poppins, Helvetica, sans-serif;
+    background-color:rgba(219, 219, 219, 0.7)
+}
+
+form p input:focus,
+form p textarea:focus {
+    background-color: rgb(255, 255, 255);
+    outline: white;
+}
+
+form p button img {
+    width: 1.5em; 
+}
+
+form p button {
+    padding: 0.8em 2em;
+    margin: 0.5em auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    font-size: 1.2em;
+    border: 1px solid rgb(44, 44, 44);
+    color: rgb(44, 44, 44);
+    font-weight: bolder;
+    background-color: rgb(219, 219, 219);
+    text-align: center;
+    border-radius: 0.5em;
+    transition: transform 0.2s ease-in;
+}
+
+form p button:hover {
+    color: seashell;
+    background-color: rgb(145, 145, 145);
+    transform: translateY(-5px);
+}
+
+#page-wrapper>a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(44, 44, 44);
+    background-color: rgba(145, 145, 145, 0.5);
+    padding: 1em;
+    margin-top: 2em;
+    border-top: 1px dotted rgb(145, 145, 145);
+    transition: transform 0.2s ease-in;
+}
+
+#page-wrapper>a:hover {
+    transform: translateY(-5px);
+    
+}
+
+footer img {
+    height: 2.5em;
+    border:1px solid rgba(219, 219, 219, 0.7);
+    border-radius: 2em;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background-color: rgb(44, 44, 44);
+    color: rgba(219, 219, 219, 0.7);
+}
+
+@media only screen and (min-width: 48em) {
+
+    .container {
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+
+    .mobile {
+        display: none;
+    }
+    
+    .desktop {
+        display: block;
+    }
+
+    .desktop ul {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+    }
+
+    .desktop ul li a{
+        text-decoration: none;
+        color: rgb(44, 44, 44);
+        background-color: rgba(219, 219, 219, 0.5);
+        font-size: 1.2em;
+        padding: 0.5em 1em;
+        border-radius: 0.5em;
+        display: inline-block;
+        transition: transform 0.2s ease-in;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, .5);
+    }
+
+    .desktop ul li a:hover {
+        transform: translateY(-5px);
+    }
+
+    .container>a:hover {
+        transition: transform 0.2s ease-in;
+        transform: translateX(10px) translateY(3px) scale(1.1);
+
+    }
+
+    .karten div {
+        margin: 0;
+    }
+
+    .karten,
+    .ich {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .tattoo,
+    #spitzname {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .tattoo a,
+    .kunst a,
+    .foto a {
+        width: 150px;
+    }
+
+    .galerie {
+        width: 100%;
+    }
+
+    .galerie div section {
+        width: 15em;
+        height: 50vh;
+    }
+
+    .galerie h3 {
+        font-size: 2em;
+    }
+
+    .galerie div img {
+        width: 150px;
+        max-width: 500px;
+        cursor: pointer;
+        transition: transform 1s ease-in-out;
+        border: 4px double rgb(44, 44, 44);
+    }
+
+    .galerie div img:hover {
+        transform: scale(2.5);
+    }
+
+    .kontakt>div>section {
+        width: 100%;
+        float: none;
+        gap: 0px;
+    }
+
+    .kontakt>div {
+        margin-left: 30%;
+        width: 30%;
+
+    }
+
+    .kontakt {
+        margin-top: 1.5em;
+    }
+
+    section form {
+        margin-left: 1.5em;
+    }
+
+    section form {
+        margin: 0;
+    }
+
+    form p{
+        width: 35em;
+        float: none;
+        margin: 0 auto;
+    }
+
+    @media only screen and (min-width: 60em) {
+
+        .desktop {
+            width: 40em;
+            float: right;
+        }
+
+        .karten,
+        .ich {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .tattoo,
+        #spitzname {
+            grid-column-end: 2;
+        }
+
+        .ich {
+            grid-template-columns: 39% 20% 39%;
+            gap: 1%;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
