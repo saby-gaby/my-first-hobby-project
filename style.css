@@ -378,7 +378,7 @@ form p button {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1em;
+    gap: 1em; 
     font-size: 1.2em;
     border: 1px solid rgb(44, 44, 44);
     color: rgb(44, 44, 44);
